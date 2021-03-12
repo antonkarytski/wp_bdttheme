@@ -1,0 +1,249 @@
+$head-font: 'Oswald', sans-serif !important;
+$default-color-dark: #222;
+$menu-height: 5em;
+$font-k: 0.25;
+
+
+#site-header {
+
+  &.one-logo, &.contacts {
+    .logo-block {
+      text-align: center;
+    }
+  }
+
+  .logo-block {
+    g {
+      fill: $default-color-dark;
+    }
+
+    .gear {
+      fill: $default-color-dark;
+    }
+
+    .logo-text {
+      fill: $default-color-dark;
+    }
+  }
+
+  &.main-page {
+    .inside-wrap {
+      justify-content: flex-start;
+    }
+  }
+
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  color: $default-color-dark;
+  font-family: $head-font;
+  height: $menu-height;
+
+
+  .inside-wrap {
+    position: relative;
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+
+    > div {
+      height: 100%;
+
+      &.navigation {
+        width: 40%;
+
+        ul.menu {
+          padding: 0 20px;
+
+          a {
+            padding: 1.2em 0.375em 0 0.375em;
+            font-size: 1.25em;
+          }
+        }
+      }
+
+      &.logo-block {
+        width: 20%;
+
+        .logo-container {
+          height: 100%;
+        }
+
+        .header-logo {
+          height: 100%;
+        }
+      }
+
+      &.phone-container {
+        $phone-block-rows-count: 3; //count of rows in phone block in header
+        font-size: 1.15em;
+        padding-right: 20px;
+        font-weight: 500;
+        text-align: right;
+        width: 40%;
+      }
+    }
+  }
+}
+
+.burger-navigation {
+  height: 100%;
+  width: 20%;
+  display: none;
+
+  .burger-nav-button {
+    padding-left: 100%;
+    width: 100%;
+    display: block;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+
+    .line-box{
+      position: absolute;
+      right: 0;
+      height: 4em !important;
+      width: 4em !important;
+      z-index: 60;
+    }
+
+    .line {
+      fill: none;
+      stroke: white;
+      stroke-width: 6;
+      transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .line1 {
+      stroke-dasharray: 60 207;
+      stroke-width: 6;
+    }
+    .line2 {
+      stroke-dasharray: 60 60;
+      stroke-width: 6;
+    }
+    .line3 {
+      stroke-dasharray: 60 207;
+      stroke-width: 6;
+    }
+  }
+
+  .burger-nav-list {
+    padding: 30px;
+    padding-top: 70px;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow-y: auto;
+    right: -100%;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+    max-width: 60%;
+
+    .menu-item {
+      margin-bottom: 25px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid white;
+
+      a {
+        font-size: 1.2em;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: #333;
+
+        &:first-child {
+        }
+
+        &:hover {
+          filter: brightness(0.9);
+        }
+      }
+    }
+  }
+
+  .burger-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+  }
+
+  &.active {
+    .burger-menu-overlay {
+      display: block;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .burger-nav-list {
+      right: 0;
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s;
+    }
+    .line1 {
+      stroke-dasharray: 90 207;
+      stroke-dashoffset: -134;
+      stroke-width: 6;
+    }
+    .line2 {
+      stroke-dasharray: 1 60;
+      stroke-dashoffset: -30;
+      stroke-width: 6;
+    }
+    .line3 {
+      stroke-dasharray: 90 207;
+      stroke-dashoffset: -134;
+      stroke-width: 6;
+    }
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 768px), (orientation: portrait) {
+  #site-header {
+    height: 4em;
+    .burger-navigation {
+      display: block;}
+
+    .inside-wrap {
+      justify-content: start;
+      flex-direction: row-reverse;
+
+      .navigation {
+        display: none;
+      }
+
+      .logo-block {
+        width: 80% !important;
+        text-align: left;
+        padding-left: 0.5em;
+      }
+
+      .phone-container {
+        display: none;
+      }
+    }
+
+    &.one-logo {
+      .inside-wrap {
+        .logo-block {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

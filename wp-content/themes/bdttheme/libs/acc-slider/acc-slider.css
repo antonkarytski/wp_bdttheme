@@ -1,0 +1,72 @@
+.acc-slider {
+  height: 100vh;
+  width: 100%;
+  transform: translateZ(0);
+}
+.acc-slider .link {
+  position: relative;
+  float: left;
+  width: 5.3333333333%;
+  height: 100%;
+  border-right: 1px solid #646464;
+  transition: 0.5s width;
+  overflow: hidden;
+}
+.acc-slider .link.current {
+  width: 84%;
+}
+.acc-slider .link.current .small {
+  opacity: 0;
+  z-index: 1;
+}
+.acc-slider .link.current .full {
+  visibility: visible;
+}
+.acc-slider .link:last-child {
+  border-right: 0;
+}
+.acc-slider .link .bg {
+  background-size: cover;
+  background-position: 50%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.acc-slider .link .small {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  opacity: 100%;
+  transition: 0.5s background-color, 0.5s opacity;
+  z-index: 3;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.acc-slider .link .small:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.acc-slider .link .small .thumbnail-title {
+  position: absolute;
+  bottom: 10vh;
+  writing-mode: sideways-lr;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Oswald", sans-serif !important;
+  color: white;
+  font-size: 40px;
+}
+.acc-slider .link .full {
+  position: absolute;
+  left: 0px;
+  z-index: 2;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+/*# sourceMappingURL=acc-slider.css.map */

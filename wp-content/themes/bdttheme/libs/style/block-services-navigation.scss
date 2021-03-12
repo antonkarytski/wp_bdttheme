@@ -1,0 +1,78 @@
+.block-service-navigation
+{
+  font-family: 'Oswald', sans-serif;
+  background-color: black;
+  color: white;
+  box-sizing: content-box;
+  padding: 100px 0;
+  display: inline-flex;
+  width: 100%;
+
+  .content
+  {
+    height: 100%;
+    width: 80%;
+
+    .inside-content-wrap {
+
+      min-height: 500px;
+      height: 500px;
+      position: relative;
+
+
+      .inside-content {
+        top: 0;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease-in;
+
+
+        .overlay {
+          top: 0;
+          background: rgb(0, 0, 0);
+          background: radial-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 1) 80%);
+          height: 100%;
+          width: 100%;
+          position: absolute;
+        }
+
+        &.current {
+          opacity: 100%;
+          visibility: visible;
+          transition: opacity 0.5s ease-in;
+
+        }
+
+      }
+    }
+  }
+
+  .navigation
+  {
+    width: 20%;
+    font-size: 25px;
+    line-height: 40px;
+    padding-left: 20px;
+
+    a
+    {
+      transition: color 0.5s ease;
+    }
+
+    a.current
+    {
+      color: rgb(30, 115, 190) ;
+    }
+
+
+    a:hover
+    {
+      color: rgb(30, 115, 190) ;
+      transition: color 0.5s ease;
+    }
+  }
+}

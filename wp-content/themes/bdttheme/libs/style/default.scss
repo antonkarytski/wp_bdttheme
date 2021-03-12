@@ -1,0 +1,151 @@
+a
+{
+  outline: none!important;
+  color: inherit;
+  transition: color 0.5s ease-out;
+}
+
+a:hover {
+  transition: color 0.5s ease-out;
+  color: #333;
+  text-decoration: none;
+}
+
+a.fill-button
+{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+button
+{
+  outline: none!important;
+  border: none!important;
+}
+
+div
+{
+  box-sizing: border-box;
+}
+
+div[class*="col-"] div[class*="col-"]
+{
+  padding:0;
+}
+
+input
+{
+  border: none;
+  outline: none;
+}
+
+img { max-width:100%; }
+
+textarea
+{
+  resize: none;
+  color: inherit;
+}
+
+ul
+{
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul:after {
+  display: block;
+  content: ' ';
+  clear: both;
+  float: none;
+}
+
+.navigation > nav
+{
+  height: 100%;
+}
+
+.navigation > nav > ul.menu
+{
+  height: 100%;
+}
+
+ul.menu
+{
+  text-decoration: none;
+  list-style: none;
+
+  > li
+  {
+    display: inline-block;
+    outline: none!important;
+    border: none!important;
+    height: 100%;
+
+    > a
+    {
+      display: block;
+      text-decoration: none;
+      box-sizing: border-box;
+      color: inherit;
+      height: 100%;
+      width: max-content;
+    }
+  }
+
+  &.list
+  {
+    li
+    {
+      display: block;
+      height: auto;
+
+      > a
+      {
+        height: auto;
+      }
+
+    }
+  }
+}
+
+
+
+
+
+
+//IN EDIT
+ul.submenu {
+  display: none;
+  position: absolute;
+  max-width: 250px;
+  top: 45px;
+  left: 0;
+  border: 1px solid #2E2E2E;
+  z-index: 30;
+}
+ul.submenu > li {
+  display: block;
+}
+ul.submenu > li > a {
+  display: block;
+  padding: 10px;
+  color: white;
+  box-sizing: border-box;
+  background-color: #2E2E2E;
+  text-decoration: none;
+
+}
+ul.submenu > li > a:hover {
+  text-decoration: none;
+
+}
+ul.menu > li:hover > ul.submenu {
+  display: block;
+}
+
+//BOOTSTRAP DEFAULT
+

@@ -1,0 +1,194 @@
+#site-header {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  color: #222;
+  font-family: "Oswald", sans-serif !important;
+  height: 5em;
+}
+#site-header.one-logo .logo-block, #site-header.contacts .logo-block {
+  text-align: center;
+}
+#site-header .logo-block g {
+  fill: #222;
+}
+#site-header .logo-block .gear {
+  fill: #222;
+}
+#site-header .logo-block .logo-text {
+  fill: #222;
+}
+#site-header.main-page .inside-wrap {
+  justify-content: flex-start;
+}
+#site-header .inside-wrap {
+  position: relative;
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+}
+#site-header .inside-wrap > div {
+  height: 100%;
+}
+#site-header .inside-wrap > div.navigation {
+  width: 40%;
+}
+#site-header .inside-wrap > div.navigation ul.menu {
+  padding: 0 20px;
+}
+#site-header .inside-wrap > div.navigation ul.menu a {
+  padding: 1.2em 0.375em 0 0.375em;
+  font-size: 1.25em;
+}
+#site-header .inside-wrap > div.logo-block {
+  width: 20%;
+}
+#site-header .inside-wrap > div.logo-block .logo-container {
+  height: 100%;
+}
+#site-header .inside-wrap > div.logo-block .header-logo {
+  height: 100%;
+}
+#site-header .inside-wrap > div.phone-container {
+  font-size: 1.15em;
+  padding-right: 20px;
+  font-weight: 500;
+  text-align: right;
+  width: 40%;
+}
+
+.burger-navigation {
+  height: 100%;
+  width: 20%;
+  display: none;
+}
+.burger-navigation .burger-nav-button {
+  padding-left: 100%;
+  width: 100%;
+  display: block;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+}
+.burger-navigation .burger-nav-button .line-box {
+  position: absolute;
+  right: 0;
+  height: 4em !important;
+  width: 4em !important;
+  z-index: 60;
+}
+.burger-navigation .burger-nav-button .line {
+  fill: none;
+  stroke: white;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.burger-navigation .burger-nav-button .line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.burger-navigation .burger-nav-button .line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.burger-navigation .burger-nav-button .line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.burger-navigation .burger-nav-list {
+  padding: 30px;
+  padding-top: 70px;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  overflow-y: auto;
+  right: -100%;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+  max-width: 60%;
+}
+.burger-navigation .burger-nav-list .menu-item {
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+}
+.burger-navigation .burger-nav-list .menu-item a {
+  font-size: 1.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #333;
+}
+.burger-navigation .burger-nav-list .menu-item a:hover {
+  filter: brightness(0.9);
+}
+.burger-navigation .burger-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+.burger-navigation.active .burger-menu-overlay {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.burger-navigation.active .burger-nav-list {
+  right: 0;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.burger-navigation.active .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.burger-navigation.active .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.burger-navigation.active .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+@media screen and (max-width: 768px), (orientation: portrait) {
+  #site-header {
+    height: 4em;
+  }
+  #site-header .burger-navigation {
+    display: block;
+  }
+  #site-header .inside-wrap {
+    justify-content: start;
+    flex-direction: row-reverse;
+  }
+  #site-header .inside-wrap .navigation {
+    display: none;
+  }
+  #site-header .inside-wrap .logo-block {
+    width: 80% !important;
+    text-align: left;
+    padding-left: 0.5em;
+  }
+  #site-header .inside-wrap .phone-container {
+    display: none;
+  }
+  #site-header.one-logo .inside-wrap .logo-block {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

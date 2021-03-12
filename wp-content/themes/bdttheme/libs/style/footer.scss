@@ -1,0 +1,45 @@
+#site-footer {
+  font-family: 'Oswald', sans-serif!important;
+  font-size: 20px;
+  height: auto;
+
+  .overlay {
+    color: white;
+    padding:  15px 1.5%;
+    width: 100%;
+
+    &.img-bg{
+      background: fixed 0 0 / cover rgba(0, 0, 0, 0);
+      background-position: bottom!important;
+      overflow: hidden;
+    }
+  }
+
+  .buttons-block {
+    .social-block {
+      font-size: 40px;
+    }
+
+    .forms {
+      font-size: 80px;
+      color: #0071BC;
+    }
+  }
+
+  .navigation
+  {
+  }
+
+  .phone-container {
+    font-size: 18px;
+    text-align: right;
+
+    > .row {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
